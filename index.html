@@ -11,32 +11,45 @@
       integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous"
     />
+    <!--Styling-->
+    <link rel="stylesheet" href="css/body.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
   </head>
   <body>
     <header class="login">
-      <h3 id="login-greeting">Log in to get started</h3>
-      <button id="login-greeting-logout">Log Out</button>
-      <div><img src="logo.png" alt="Bankist Logo" /></div>
+      <div class="login-greet-container">
+        <h3 id="login-greeting">Log in to get started</h3>
+        <button id="logout-btn">Log Out</button>
+      </div>
       <form class="login-inputs">
         <input
           id="login-username"
+          class="login-input"
           name="username"
           type="text"
           placeholder="username"
+          maxlength="2"
           required
         />
         <input
           id="login-pin"
+          class="login-input"
           name="pin"
           type="password"
           placeholder="pin"
+          maxlength="4"
           required
         />
-        <button id="login-button">
-          <i class="fas fa-arrow-right"></i>
-        </button>
+        <button id="login-button" class="arrow">&rarr;</button>
       </form>
     </header>
+
+    <section class="logo">
+      <div class="logo-container">
+        <img src="logo.png" alt="Bankist Logo" />
+      </div>
+    </section>
 
     <main>
       <div class="balance">
@@ -83,9 +96,7 @@
               placeholder="Amount"
               required
             />
-            <button id="transfer-btn">
-              <i class="fas fa-arrow-right"></i>
-            </button>
+            <button id="transfer-btn" class="arrow">&rarr;</button>
           </form>
         </div>
 
@@ -100,9 +111,7 @@
               placeholder="Amount"
               required
             />
-            <button id="loan-btn">
-              <i class="fas fa-arrow-right"></i>
-            </button>
+            <button id="loan-btn" class="arrow">&rarr;</button>
           </form>
         </div>
 
@@ -124,9 +133,7 @@
               placeholder="Enter your pin"
               required
             />
-            <button id="close-btn">
-              <i class="fas fa-arrow-right"></i>
-            </button>
+            <button id="close-btn" class="arrow">&rarr;</button>
           </form>
         </div>
       </div>
@@ -146,9 +153,7 @@
             ><span id="stats-amounts-type">£</span>
           </p>
           <div>
-            <button id="sort-btn">
-              <i class="fas fa-arrow-down"></i> Sort
-            </button>
+            <button id="sort-btn">&downarrow; Sort</button>
           </div>
         </div>
         <div class="stats-timer">

@@ -1,0 +1,32 @@
+/*====== Basic Button Styling ======*/
+button {
+  cursor: pointer;
+  border-radius: 1rem;
+  font-size: 1.05rem;
+  border: none;
+  transition: 0.1s ease;
+  background-color: white;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+/*======= Arrow Button Styling =======*/
+.arrow {
+  padding: 0.3rem 0;
+  border-radius: 10px;
+  width: 2.5rem;
+  margin-left: 1rem;
+}
+
+/*======= Sort Button Styling =======*/
+#sort-btn {
+  padding: 0.3rem;
+  width: 4rem;
+}
