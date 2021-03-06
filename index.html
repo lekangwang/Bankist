@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bankist</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="login">
+      <h3 id="login-greeting">Log in to get started</h3>
+      <button id="login-greeting-logout">Log Out</button>
+      <div><img src="logo.png" alt="Bankist Logo" /></div>
+      <form class="login-inputs">
+        <input
+          id="login-username"
+          name="username"
+          type="text"
+          placeholder="username"
+          required
+        />
+        <input
+          id="login-pin"
+          name="pin"
+          type="password"
+          placeholder="pin"
+          required
+        />
+        <button id="login-button">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </form>
+    </header>
+
+    <main>
+      <div class="balance">
+        <div class="balance-label">
+          <h1>Current Balance</h1>
+          <h5>To be decided</h5>
+        </div>
+        <div class="balance-current">
+          <span id="balance-current-amount">0</span>
+          <span id="balance-current-type">USD</span>
+        </div>
+      </div>
+      <div class="app">
+        <div class="app-movements">
+          <div class="app-movements-row">
+            <div class="app-movements-type app-movements-type-withdrawal">
+              2 withdrawal
+            </div>
+            <div class="app-movements-amount">-1300</div>
+          </div>
+          <div class="app-movements-row">
+            <div class="app-movements-type app-movements-type-deposit">
+              1 deposit
+            </div>
+            <div class="app-movements-amount">500</div>
+          </div>
+        </div>
+
+        <!--Transfer-->
+        <div class="app-transfer">
+          <p>Make a transfer</p>
+          <form class="app-transfer-input">
+            <input
+              type="text"
+              name="username"
+              id="app-transfer-input-username"
+              placeholder="Transfer to"
+              required
+            />
+            <input
+              type="number"
+              name="amount"
+              id="app-transfer-input-amount"
+              placeholder="Amount"
+              required
+            />
+            <button id="transfer-btn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+
+        <!--Loan-->
+        <div class="app-loan">
+          <p>Request a loan</p>
+          <form class="app-loan-input">
+            <input
+              type="number"
+              name="amount"
+              id="app-loan-input-amount"
+              placeholder="Amount"
+              required
+            />
+            <button id="loan-btn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+
+        <!--Close-->
+        <div class="app-close">
+          <p>Close this account</p>
+          <form class="app-close-input">
+            <input
+              type="text"
+              name="username"
+              id="app-close-input-username"
+              placeholder="Enter your username"
+              required
+            />
+            <input
+              type="number"
+              name="pin"
+              id="app-close-input-pin"
+              placeholder="Enter your pin"
+              required
+            />
+            <button id="close-btn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <!--APP-->
+      <div class="stats">
+        <div class="stats-amounts">
+          <p>
+            in <span id="stats-amounts-in">0</span
+            ><span id="stats-amounts-type">£</span>
+          </p>
+          <p>
+            out <span id="stats-amounts-out">0</span
+            ><span id="stats-amounts-type">£</span>
+          </p>
+          <p>
+            interest <span id="stats-amounts-in">0</span
+            ><span id="stats-amounts-type">£</span>
+          </p>
+          <div>
+            <button id="sort-btn">
+              <i class="fas fa-arrow-down"></i> Sort
+            </button>
+          </div>
+        </div>
+        <div class="stats-timer">
+          You will be logged out in <span id="stats-timer-time">10:00</span>
+        </div>
+      </div>
+    </main>
+
+    <footer>Le Kang Wang &copy 2021</footer>
+  </body>
+</html>
