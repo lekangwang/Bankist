@@ -1,6 +1,8 @@
 .app {
   display: grid;
+  margin: 2rem 0;
   width: 100%;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 4fr 3fr;
   grid-template-rows: 2fr 2fr 2fr 1fr;
+  grid-gap: 2rem;
 }

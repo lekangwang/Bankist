@@ -1,5 +1,42 @@
 .app-movements {
   width: 100%;
-  border: 2px solid green;
+  background-color: white;
   grid-row: 1 / span 3;
+  overflow-y: scroll;
+  border-radius: 1rem;
+}
+
+/*===== Styling for individual movements======*/
+.app-movements-row {
+  width: 100%;
+  height: 5rem;
+  border-bottom: 2px solid lightgrey;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.app-movements-type {
+  padding: 0.3rem 1rem;
+  width: 8rem;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.app-movements-type-deposit {
+  background-color: green;
+}
+
+.app-movements-type-withdrawal {
+  background-color: red;
+}
+
+.app-movements-amount {
+  background-color: white;
+  font-size: 1.1rem;
 }
