@@ -1,0 +1,5 @@
+.app-movements {
+  width: 100%;
+  border: 2px solid green;
+  grid-row: 1 / span 3;
+}

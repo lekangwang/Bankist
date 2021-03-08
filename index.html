@@ -15,6 +15,19 @@
     <link rel="stylesheet" href="css/body.css" />
     <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <!--Main app styling-->
+    <link rel="stylesheet" href="css/app/main.css" />
+    <link rel="stylesheet" href="css/app/balance.css" />
+    <link rel="stylesheet" href="css/app/app.css" />
+    <link rel="stylesheet" href="css/app/movements.css" />
+
+    <!--Actions styling-->
+    <link rel="stylesheet" href="css/app/actions/action.css" />
+    <link rel="stylesheet" href="css/app/actions/transfer.css" />
+    <link rel="stylesheet" href="css/app/actions/loan.css" />
+    <link rel="stylesheet" href="css/app/actions/close.css" />
   </head>
   <body>
     <header class="login">
@@ -59,9 +72,11 @@
         </div>
         <div class="balance-current">
           <span id="balance-current-amount">0</span>
-          <span id="balance-current-type">USD</span>
+          <span id="balance-current-type">£</span>
         </div>
       </div>
+
+      <!--App-->
       <div class="app">
         <div class="app-movements">
           <div class="app-movements-row">
@@ -136,30 +151,31 @@
             <button id="close-btn" class="arrow">&rarr;</button>
           </form>
         </div>
-      </div>
-      <!--APP-->
-      <div class="stats">
-        <div class="stats-amounts">
-          <p>
-            in <span id="stats-amounts-in">0</span
-            ><span id="stats-amounts-type">£</span>
-          </p>
-          <p>
-            out <span id="stats-amounts-out">0</span
-            ><span id="stats-amounts-type">£</span>
-          </p>
-          <p>
-            interest <span id="stats-amounts-in">0</span
-            ><span id="stats-amounts-type">£</span>
-          </p>
-          <div>
-            <button id="sort-btn">&downarrow; Sort</button>
+        <!--Stats-->
+        <div class="stats">
+          <div class="stats-amounts">
+            <p>
+              in <span id="stats-amounts-in">0</span
+              ><span id="stats-amounts-type">£</span>
+            </p>
+            <p>
+              out <span id="stats-amounts-out">0</span
+              ><span id="stats-amounts-type">£</span>
+            </p>
+            <p>
+              interest <span id="stats-amounts-in">0</span
+              ><span id="stats-amounts-type">£</span>
+            </p>
+            <div>
+              <button id="sort-btn">&downarrow; Sort</button>
+            </div>
+          </div>
+          <div class="stats-timer">
+            You will be logged out in <span id="stats-timer-time">10:00</span>
           </div>
         </div>
-        <div class="stats-timer">
-          You will be logged out in <span id="stats-timer-time">10:00</span>
-        </div>
       </div>
+      <!--APP-->
     </main>
 
     <footer>Le Kang Wang &copy 2021</footer>
