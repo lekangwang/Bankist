@@ -3,6 +3,6 @@
   margin: 2rem 0;
   width: 100%;
   grid-template-columns: 4fr 3fr;
-  grid-template-rows: 2fr 2fr 2fr 1fr;
+  grid-template-rows: 12rem 12rem 12rem auto;
   grid-gap: 2rem;
 }

@@ -1,0 +1,35 @@
+.stats {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  grid-column: 1 / span 2;
+}
+
+.stats-amounts {
+  display: flex;
+  width: auto;
+  justify-content: space-around;
+}
+
+.stats-amounts p {
+  margin-right: 2rem;
+  text-transform: uppercase;
+}
+
+.stats-amounts span {
+  font-size: 1.4rem;
+}
+
+/*==== Coloring individual money amounts ======*/
+#stats-amounts-in {
+  color: green;
+}
+
+#stats-amounts-out {
+  color: red;
+}
+
+#stats-amounts-interest {
+  color: orange;
+}
