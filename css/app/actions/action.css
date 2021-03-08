@@ -1,0 +1,26 @@
+.app-action-template {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.app-action-template p {
+  font-size: 1.3rem;
+  background: none;
+}
+
+.app-action-input {
+  background-color: inherit;
+}
+
+.app-action-input input {
+  background-color: white;
+  opacity: 0.7;
+  border: none;
+  height: 3rem;
+  border-radius: 10px;
+  padding: 0 1rem;
+}
