@@ -19,6 +19,10 @@
 
 #logout-btn {
   padding: 0.5rem 3rem;
+
+  /*== hide logout btn from view until logged in ==*/
+  opacity: 0;
+  z-index: -1;
 }
 
 /*======= Login Inputs ========*/
@@ -30,6 +34,13 @@
   background-color: white;
   text-align: center;
   font-size: 1.1rem;
+}
+
+/*===== Login button ======*/
+#login-btn:disabled {
+  background-color: lightgray;
+  color: white;
+  cursor: default;
 }
 
 /*======= Logo ========*/

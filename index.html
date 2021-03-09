@@ -37,14 +37,14 @@
         <h3 id="login-greeting">Log in to get started</h3>
         <button id="logout-btn">Log Out</button>
       </div>
-      <form class="login-inputs">
+      <div class="login-inputs">
         <input
           id="login-username"
           class="login-input"
           name="username"
           type="text"
           placeholder="username"
-          maxlength="2"
+          maxlength="3"
           required
         />
         <input
@@ -57,7 +57,7 @@
           required
         />
         <button id="login-btn" class="arrow">&rarr;</button>
-      </form>
+      </div>
     </header>
 
     <section class="logo">
@@ -66,7 +66,7 @@
       </div>
     </section>
 
-    <main>
+    <main id="main-app">
       <div class="balance">
         <div class="balance-label">
           <h1>Current Balance</h1>
@@ -98,7 +98,7 @@
         <!--Transfer-->
         <div class="app-transfer app-action-template">
           <p>Make a transfer</p>
-          <form class="app-transfer-input app-action-input">
+          <div class="app-transfer-input app-action-input">
             <input
               type="text"
               name="username"
@@ -114,13 +114,13 @@
               required
             />
             <button id="transfer-btn" class="arrow">&rarr;</button>
-          </form>
+          </div>
         </div>
 
         <!--Loan-->
         <div class="app-loan app-action-template">
           <p>Request a loan</p>
-          <form class="app-loan-input app-action-input">
+          <div class="app-loan-input app-action-input">
             <input
               type="number"
               name="amount"
@@ -129,13 +129,13 @@
               required
             />
             <button id="loan-btn" class="arrow">&rarr;</button>
-          </form>
+          </div>
         </div>
 
         <!--Close-->
         <div class="app-close app-action-template">
           <p>Close this account</p>
-          <form class="app-close-input app-action-input">
+          <div class="app-close-input app-action-input">
             <input
               type="text"
               name="username"
@@ -151,7 +151,7 @@
               required
             />
             <button id="close-btn" class="arrow">&rarr;</button>
-          </form>
+          </div>
         </div>
         <!--Stats-->
         <div class="stats">
@@ -174,5 +174,7 @@
     <footer>Le Kang Wang &copy 2021</footer>
 
     <!--JS-->
+    <script src="js/var.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>

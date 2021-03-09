@@ -15,6 +15,8 @@ const balanceVal = document.getElementById("balance-current-amount");
 const balanceType = document.getElementById("balance-current-type");
 
 //Main app
+const mainElement = document.getElementById("main-app");
+
 //Transfer
 const transferUsername = document.getElementById("app-transfer-input-username");
 const transferAmount = document.getElementById("app-transfer-input-amount");

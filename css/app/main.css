@@ -6,4 +6,9 @@ main {
   align-items: center;
   margin-top: 2rem;
   padding: 1rem 5%;
+
+  /*== hides app ui from view ==*/
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.1s ease;
 }
