@@ -80,7 +80,7 @@
 
       <!--App-->
       <div class="app">
-        <div class="app-movements">
+        <div class="app-movements" id="mov-container">
           <div class="app-movements-row">
             <div class="app-movements-type app-movements-type-withdrawal">
               2 withdrawal
@@ -104,6 +104,7 @@
               name="username"
               id="app-transfer-input-username"
               placeholder="Transfer to"
+              maxlength="3"
               required
             />
             <input
@@ -175,6 +176,10 @@
 
     <!--JS-->
     <script src="js/var.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/movements.js"></script>
+    <script src="js/actions.js"></script>
+    <script src="js/stats.js"></script>
     <script src="js/login.js"></script>
   </body>
 </html>
