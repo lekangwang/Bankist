@@ -4,20 +4,26 @@
 transferBtn.addEventListener("click", () => {
   //Take find the recipient, and add the deposit to movements array
   const recipient = transferUsername.value;
-  const amount = transferAmount.value;
-  const recipientIndex = 0;
+  let amount = transferAmount.value;
+  let recipientIndex = 0;
 
   //Check if the user inputs are non-empty
   if (recipient === "" || amount === "") {
     clearInputs(transferAmount, transferUsername);
     return;
     //Check that the transfer is non-zero, is +, and is smaller or = their balance
-  } else if (amount <= 0 || Number(amount) < Number(balanceVal.innerText)) {
+  } else if (amount <= 0 || Number(amount) > Number(balanceVal.innerText)) {
+    clearInputs(transferAmount, transferUsername);
+    return;
+  } else if (!findUsername(recipient)) {
+    clearInputs(transferAmount, transferUsername);
+    return;
+  } else if (findUserInitials(currentUser.owner) === recipient) {
     clearInputs(transferAmount, transferUsername);
     return;
   }
 
-  amount = Number(amount);
+  amount = Number(amount).toFixed(2);
 
   accounts.forEach((account, i) => {
     const username = findUserInitials(account.owner);
@@ -25,29 +31,32 @@ transferBtn.addEventListener("click", () => {
   });
 
   const targetAccount = accounts[recipientIndex];
-  targetAccount.movements.push(amount);
+  targetAccount.movements.push(Number(amount));
 
   //Add the withdrawal to the spender
-  currentUser.movements.push(-amount);
+  currentUser.movements.push(-Number(amount));
   displayMovements(currentUser);
   clearInputs(transferAmount, transferUsername);
+  updateStats();
 });
 
 //Loan
 loanBtn.addEventListener("click", () => {
   //find the loan amount, push to movements array
-  const amount = loanAmount.value;
+  let amount = loanAmount.value;
 
   //Check if the loan amount input is empty
-  if (amount === "") {
+  if (amount === "" || amount < 0) {
     clearInputs(loanAmount);
     return;
   } else {
-    amount = Number(amount);
+    amount = Number(amount).toFixed(2);
   }
-  currentUser.movements.push(amount);
+  currentUser.movements.push(Number(amount));
+  console.log(currentUser.movements);
   displayMovements(currentUser);
   clearInputs(loanAmount);
+  updateStats();
 });
 
 //Close account
@@ -55,7 +64,7 @@ closeBtn.addEventListener("click", () => {
   //check if the input data matches the current
   //account data
   const username = closeUsername.value;
-  const pin = closePin.value;
+  let pin = closePin.value;
 
   //check if username or pin is empty
   if (username === "" || pin === "") {

@@ -21,6 +21,9 @@ loginBtn.addEventListener("click", () => {
     //Track the current user
     currentUser = accounts[userIndex];
 
+    //display stats
+    updateStats();
+
     //change greeting
     const name = currentUser.owner;
     const firstName = name.slice(0, name.indexOf(" "));

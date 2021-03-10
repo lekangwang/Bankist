@@ -10,7 +10,7 @@ const displayMovements = function (account) {
     <div class="app-movements-type app-movements-type-${movType}">
       ${i + 1} ${movType}
     </div>
-    <div class="app-movements-amount">${mov} £</div>
+    <div class="app-movements-amount">${Number(mov).toFixed(2)} £</div>
   </div>`;
 
     movContainer.insertAdjacentHTML("afterbegin", movHTML);

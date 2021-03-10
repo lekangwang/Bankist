@@ -142,6 +142,7 @@
               name="username"
               id="app-close-input-username"
               placeholder="Enter your username"
+              maxlength="3"
               required
             />
             <input
@@ -149,6 +150,7 @@
               name="pin"
               id="app-close-input-pin"
               placeholder="Enter your pin"
+              maxlength="4"
               required
             />
             <button id="close-btn" class="arrow">&rarr;</button>
@@ -157,9 +159,9 @@
         <!--Stats-->
         <div class="stats">
           <div class="stats-amounts">
-            <p>in <span id="stats-amounts-in">0£</span></p>
-            <p>out <span id="stats-amounts-out">0£</span></p>
-            <p>interest <span id="stats-amounts-interest">0£</span></p>
+            <p>in <span id="stats-amounts-in">0</span>£</p>
+            <p>out <span id="stats-amounts-out">0</span>£</p>
+            <p>interest <span id="stats-amounts-interest">0</span>£</p>
             <div>
               <button id="sort-btn">&downarrow; Sort</button>
             </div>
@@ -176,10 +178,10 @@
 
     <!--JS-->
     <script src="js/var.js"></script>
+    <script src="js/stats.js"></script>
     <script src="js/helper.js"></script>
     <script src="js/movements.js"></script>
     <script src="js/actions.js"></script>
-    <script src="js/stats.js"></script>
     <script src="js/login.js"></script>
   </body>
 </html>

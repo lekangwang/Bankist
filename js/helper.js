@@ -25,3 +25,16 @@ const logOut = function () {
   //change to old greeting
   loginGreeting.innerText = "Login to get started";
 };
+
+//update stats
+const updateStats = function () {
+  balanceVal.innerText = calcBalance().toFixed(2);
+  statsInVal.innerText = calcIn().toFixed(2);
+  statsOutVal.innerText = calcOut().toFixed(2);
+  statsInterestVal.innerText = calcInterest().toFixed(2);
+};
+
+//check if user exists
+const findUsername = function (userInitials) {
+  return accounts.some((user) => findUserInitials(user.owner) === userInitials);
+};

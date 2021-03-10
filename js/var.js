@@ -70,6 +70,20 @@ const account4 = {
   pin: 4444,
 };
 
-const accounts = [account1, account2, account3, account4];
+const account5 = {
+  owner: "Le Kang Wang",
+  movements: [1, 1, 1, 1, 1],
+  interestRate: 1,
+  pin: 5555,
+};
+
+// const account5 = {
+//   owner: "Le Kang Wang",
+//   movements: [1, 1, 1, 1, 1],
+//   interestRate: 1,
+//   pin: 5555,
+// };
+
+const accounts = [account1, account2, account3, account4, account5];
 
 let currentUser = undefined;
