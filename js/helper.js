@@ -38,3 +38,10 @@ const updateStats = function () {
 const findUsername = function (userInitials) {
   return accounts.some((user) => findUserInitials(user.owner) === userInitials);
 };
+
+//swap array elements (for sort.js)
+const swap = function (arr, i, j) {
+  const temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
+};

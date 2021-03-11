@@ -1,8 +1,10 @@
 "use strict";
 
 //display the movements based on the account
-const displayMovements = function (account) {
-  const movements = account.movements;
+const displayMovements = function (account, sorted = false) {
+  const movements = sorted
+    ? sortMovements(account.movements)
+    : account.movements;
   movContainer.innerHTML = "";
   movements.forEach((mov, i) => {
     const movType = mov < 0 ? "withdrawal" : "deposit";

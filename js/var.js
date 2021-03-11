@@ -84,6 +84,6 @@ const account5 = {
 //   pin: 5555,
 // };
 
-const accounts = [account1, account2, account3, account4, account5];
+const accounts = [account1, account2, account3, account4];
 
 let currentUser = undefined;
